@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Galati - Resume</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --light-grey: #ecf0f1;
+            --dark-grey: #34495e;
+            --text-color: #555;
+            --card-bg: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-grey);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        header h1 {
+            margin: 0;
+            color: var(--primary-color);
+            font-size: 2.8em;
+        }
+
+        .contact-info {
+            margin-top: 10px;
+        }
+
+        .contact-info a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        
+        .contact-info a:hover {
+            color: var(--primary-color);
+        }
+
+        .section {
+            margin-top: 30px;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--light-grey);
+            margin-bottom: 20px;
+        }
+        
+        #summary p {
+            font-size: 1.1em;
+            text-align: justify;
+        }
+
+        .job, .education-item {
+            margin-bottom: 25px;
+        }
+
+        .job-title, .degree {
+            font-weight: bold;
+            color: var(--dark-grey);
+            font-size: 1.2em;
+        }
+        
+        .company, .university {
+            font-style: italic;
+            color: var(--secondary-color);
+        }
+        
+        .date {
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+
+        .job-details ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .skill {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--light-grey);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .project-content {
+            flex-grow: 1;
+        }
+        
+        .project-course {
+            font-size: 0.9em;
+            color: var(--secondary-color);
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .project-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .project-description {
+            font-size: 0.95em;
+            margin-bottom: 15px;
+        }
+        
+        .project-link {
+            display: inline-block;
+            text-decoration: none;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: auto;
+        }
+
+        .project-link:hover {
+            background-color: var(--secondary-color);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--light-grey);
+            font-size: 0.9em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 15px;
+            }
+            header h1 {
+                font-size: 2.2em;
+            }
+            .contact-info a {
+                display: block;
+                margin: 5px 0;
+            }
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>David Galati</h1>
+            <div class="contact-info">
+                <a href="mailto:david.galati10@gmail.com">david.galati10@gmail.com</a> |
+                <a href="tel:+310625463282">(+31) 0625463282</a> |
+                <a href="https://www.linkedin.com/in/david-galati-30b70a209/" target="_blank">LinkedIn</a>
+            </div>
+        </header>
+
+        <main>
+            <section id="summary" class="section">
+                <h2 class="section-title">Professional Summary</h2>
+                <p>
+                    A highly motivated and results-oriented professional with a Master of Science in Business Information Technology, holding a dual specialization in Data Science and IT Management & Enterprise Architecture. Passionate about bridging the gap between technical implementation and strategic business goals. Proven expertise in developing scalable IT solutions, leveraging data-driven insights from machine learning and big data analysis, and designing robust, service-oriented systems.
+                </p>
+            </section>
+            
+            <section id="experience" class="section">
+                <h2 class="section-title">Work Experience</h2>
+                <div class="job">
+                    <div class="job-title">Database Administrator</div>
+                    <div class="company">BaseTide | Hoofddorp, Netherlands</div>
+                    <div class="date">Sep 2025 - Current</div>
+                    <div class="job-details">
+                        <ul>
+                            <li>Architected and implemented a 3-node high-availability PostgreSQL cluster, featuring a primary server, a replica server, and a dedicated Barman backup node to ensure business continuity.</li>
+                            <li>Successfully executed database backup, restore, and point-in-time recovery (PITR) procedures using WAL archiving, guaranteeing data integrity and minimizing potential downtime.</li>
+                            <li>Deployed and configured a Pgpool-II cluster to manage database connections efficiently, implementing connection pooling and query load balancing to optimize performance and resource utilization.</li>
+                            <li>Automated the provisioning and configuration of server infrastructure using Terraform and Ansible, following Infrastructure as Code (IaC) best practices.</li>
+                            <li>Deployed applications and database services across various environments, including Docker containers, Virtual Machines, and LXC containers, streamlining deployment workflows.</li>
+                            <li>Installed and performed initial configuration of an Oracle 23ai database environments, gaining hands-on experience with modern Oracle database features.</li>
+                        </ul>
+                    </div>
+                </div>
+                 <div class="job">
+                    <div class="job-title">Onboarding Project Mentor</div>
+                    <div class="company">Deutsche Bank | Bucharest, Romania</div>
+                    <div class="date">Jul 2025 - Sep 2025</div>
+                        <div class="job-details">
+                            <ul>
+                                <li>Successfully mentored a team of 6 newly hired Deutsche Bank employees through their onboarding project, guiding them in the development of a full-stack AI-based CV Screener. </li>
+                                <li>The project was recognized with the "Best Project Award".</li>
+                            </ul>
+                        </div>
+                </div>
+                <div class="job">
+                    <div class="job-title">Computer Science Teacher</div>
+                    <div class="company">Navitas | Twente Pathway College</div>
+                    <div class="date">Feb 2025 - Jul 2025</div>
+                     <div class="job-details">
+                        <ul>
+                            <li>Teaching Python / Intro to CS Seminars to pre-university students</li>
+                            <li>Preparing Teaching material and Grading</li>
+                            <li>Mentoring and guiding project groups</li>
+                            <li>Preparing Course material</li>
+                            <li>Grading exams and assignments</li>
+                        </ul>
+                    </div>
+                 <div class="job">
+                    <div class="job-title">Head Teaching Assistant</div>
+                    <div class="company">University of Twente | Enschede, Netherlands</div>
+                    <div class="date">Sep 2022 - Jul 2025</div>
+                     <div class="job-details">
+                        <ul>
+                            <li>Coordinated and managed a team of over 20 teaching assistants for multiple Bachelor's and Master's level Computer Science courses.</li>
+                            <li>Acted as the primary liaison between TAs and professors to ensure standardized grading and effective session delivery.</li>
+                            <li>Organized weekly SCRUM meetings for student project groups, guiding them in agile methodologies.</li>
+                        </ul>
+                    </div>
+                </div>
+                 <div class="job">
+                    <div class="job-title">Teaching Assistant</div>
+                    <div class="company">University of Twente | Enschede, Netherlands</div>
+                    <div class="date">Sep 2021 - Sep 2022</div>
+                     <div class="job-details">
+                        <ul>
+                            <li>Mentored and guided students in practical lab sessions for courses including Object-Oriented Programming, Web Science, and Data Science.</li>
+                            <li>Assessed and graded a high volume of assignments, projects, and exams.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="projects" class="section">
+                <h2 class="section-title">Academic & Personal Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                         <div class="project-content">
+                            <div class="project-course">Data Science</div>
+                            <div class="project-title">Hate Speech Detection Using Transformer Models</div>
+                            <p class="project-description">This study explores the performance of various machine learning models, comparing traditional approaches with state-of-the-art transformer-based models in the context of hate speech detection across different social media platforms.</p>
+                        </div>
+                        <a href="https://github.com/LeTartap/hate-speech-classification" class="project-link" target="_blank">View on GitHub</a>
+                    </div>
+                     <div class="project-card">
+                         <div class="project-content">
+                            <div class="project-course">Service-oriented Architecture</div>
+                            <div class="project-title">Service-Oriented Trip Planner</div>
+                            <p class="project-description">A comprehensive trip planning and reminder system that seamlessly integrates a user-friendly calendar interface with real-time notifications and authentication services, built on a microservices architecture.</p>
+                        </div>
+                        <a href="https://github.com/LeTartap/SOATripPlannerCentralizer" class="project-link" target="_blank">View on GitHub</a>
+                    </div>
+                    <div class="project-card">
+                         <div class="project-content">
+                            <div class="project-course">Architecture of Information Systems</div>
+                            <div class="project-title">End-of-Life Prediction for Dutch Civil Infrastructure</div>
+                            <p class="project-description">This project outlines a new architectural vision for Rijkswaterstaat to address the critical challenge of predicting the end-of-life for aging civil infrastructure in the Netherlands.</p>
+                        </div>
+                        <a href="https://github.com/LeTartap/TNO-RWS-case-architecture-of-information-systems" class="project-link" target="_blank">View on GitHub</a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-content">
+                            <div class="project-course">Managing Big Data</div>
+                            <div class="project-title">The Influence of ChatGPT on Wikipedia</div>
+                            <p class="project-description">This project investigates the evolving trends in Wikipedia's usage, focusing on the impact of generative AI on content creation. This work was further developed into my Master's Thesis.</p>
+                        </div>
+                        <a href="https://github.com/LeTartap/MBD-Wikipedia-ChatGPT-Analysis" class="project-link" target="_blank">View on GitHub</a>
+                    </div>
+                     <div class="project-card">
+                         <div class="project-content">
+                            <div class="project-course">Enterprise Architecture</div>
+                            <div class="project-title">Digital Matchmaking in Freight Logistics</div>
+                            <p class="project-description">Designed and validated the architecture for a Freight Mobility as a Service (FMaaS) platform, supporting decentralized, real-time data sharing and decision-making across a diverse network of logistics stakeholders.</p>
+                        </div>
+                        <a href="https://github.com/LeTartap/FMaaS-case-enterprise-architecture.git" class="project-link" target="_blank">View on GitHub</a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-content">
+                            <div class="project-course">Smart Industry Systems</div>
+                            <div class="project-title">Optimizing Energy Efficiency in Smart Containers</div>
+                            <p class="project-description">Developed an intelligent environmental control system that uses sensor data to monitor and control the conditions within smart containers, leading to significant energy savings.</p>
+                        </div>
+                        <a href="https://github.com/LeTartap/SIS-Smart-Containers" class="project-link" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="section">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-container">
+                    <span class="skill">Java</span>
+                    <span class="skill">C#</span>
+                    <span class="skill">OOP</span>
+                    <span class="skill">PostgreSQL</span>
+                    <span class="skill">Oracle DB</span>
+                    <span class="skill">Ansible</span>
+                    <span class="skill">Terraform</span>
+                    <span class="skill">Docker</span>
+                    <span class="skill">Kubernetes</span>
+                    <span class="skill">Linux</span>
+                    <span class="skill">High Availability (HA)</span>
+                    <span class="skill">Disaster Recovery (DR)</span>
+                    <span class="skill">IaC</span>
+                    <span class="skill">Python</span>
+                    <span class="skill">Machine Learning</span>
+                    <span class="skill">Big Data</span>
+                    <span class="skill">Apache Spark</span>
+                    <span class="skill">SOA</span>
+                    <span class="skill">Enterprise Architecture</span>
+                    <span class="skill">.NET</span>
+                    <span class="skill">Git</span>
+                    <span class="skill">CI/CD</span>
+                    <span class="skill">Agile Methodologies</span>
+                    <span class="skill">Microservices</span>
+
+                </div>
+            </section>
+
+            <section id="education" class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="education-item">
+                    <div class="degree">Certified Negotiator</div>
+                    <div class="university">Negotiation Project Twente (NPT) | Enschede, Netherlands</div>
+                    <div class="date">2024- 2025</div>
+                </div>
+                <div class="education-item">
+                    <div class="degree">Master's Degree in Business Information Technology</div>
+                    <div class="university">University of Twente | Enschede, Netherlands</div>
+                    <div class="date">2023 - 2025</div>
+                </div>
+                 <div class="education-item">
+                    <div class="degree">Bachelor's Degree in Computer Science</div>
+                    <div class="university">University of Twente | Enschede, Netherlands</div>
+                    <div class="date">2020 - 2023</div>
+                </div>
+                 <div class="education-item">
+                    <div class="degree">Software Development Certificate</div>
+                    <div class="university">Step IT Academy | Bucharest, Romania</div>
+                    <div class="date">2016 - 2019</div>
+                </div>
+                    <div class="education-item">
+                    <div class="degree">Diploma de Bacalaureat | Math and Computer Science</div>
+                    <div class="university">Ion Luca Caragiale National College | Bucharest, Romania</div>
+                    <div class="date">2016 - 2019</div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 David Galati. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
