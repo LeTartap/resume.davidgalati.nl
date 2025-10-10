@@ -329,7 +329,38 @@
     a[href^="mailto"]::after, a[href^="tel"]::after {
         content: "";
     }
-}
+        /* Add these styles inside your @media print block to simplify project cards */
+    .projects-grid {
+        display: block; /* Overrides the grid layout for a simple vertical flow */
+    }
+
+    .project-card {
+        display: block; /* Ensure cards behave as simple blocks */
+        border: none; /* Remove card borders */
+        box-shadow: none; /* Remove card shadows */
+        padding: 0; /* Remove card padding */
+        margin-bottom: 1.5em; /* Add space between each project entry */
+        border-bottom: 1px solid #ccc; /* Add a simple line to separate projects */
+        padding-bottom: 1em; /* Space before the separator line */
+    }
+
+    .project-course {
+        font-size: 1em;
+        font-style: italic;
+        color: #333 !important;
+    }
+
+    .project-title {
+        font-size: 1.1em;
+        font-weight: bold;
+        color: black !important;
+        margin-bottom: 0.2em;
+    }
+
+    .project-description {
+        font-size: 1em;
+        margin-bottom: 0.5em;
+    }
     </style>
 </head>
 <body>
@@ -427,7 +458,7 @@ A highly motivated professional with a Master’s in Business Information Techno
                 <div class="projects-grid">
                     <div class="project-card">
                         <div class="project-content">
-                            <div class="project-course">Master's Thesis / Managing Big Data</div>
+                            <div class="project-course">Managing Big Data</div>
                             <div class="project-title">The Influence of ChatGPT on Wikipedia</div>
                             <p class="project-description">This project investigates the evolving trends in Wikipedia's usage, focusing on the impact of generative AI on content creation. This work was further developed into my Master's Thesis.</p>
                         </div>
