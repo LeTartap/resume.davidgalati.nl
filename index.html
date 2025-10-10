@@ -199,6 +199,31 @@
             border-top: 1px solid var(--light-grey);
             font-size: 0.9em;
         }
+        /* Add these styles for the new languages section */
+        .languages-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .language-item {
+            background-color: var(--light-grey);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .language-name {
+            font-weight: bold;
+            color: var(--dark-grey);
+        }
+
+        .language-level {
+            font-style: italic;
+            color: var(--text-color);
+        }
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -217,6 +242,89 @@
                 grid-template-columns: 1fr;
             }
         }
+    @media print {
+    /* --- Page Layout & Margins --- */
+    @page {
+        margin: 1.5cm; /* Adds proper margins around the entire PDF page */
+    }
+
+    body {
+        background-color: white;
+        color: black;
+        font-family: 'Times New Roman', serif;
+        font-size: 10.5pt;
+        line-height: 1.4; /* Improves line spacing for print readability */
+    }
+
+    /* --- Spacing & Page Break Control --- */
+    .container {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        border: none;
+    }
+
+    /* Prevents titles from being stranded at the bottom of a page */
+    .section-title {
+        page-break-after: avoid;
+    }
+
+    /* Prevents these key sections from splitting across two pages */
+    .job, .project-card, .education-item {
+        page-break-inside: avoid;
+    }
+
+    /* Prevents single "orphan" lines of a paragraph appearing at the top of a new page */
+    p, li {
+        orphans: 3;
+        widows: 3;
+    }
+
+    /* --- Styling Cleanup for Print --- */
+    h1, h2, .section-title, .project-title, .job-title, .degree, .profile-picture {
+        color: black !important;
+        border-color: #333 !important;
+    }
+    
+    .contact-info a, .company, .university, .project-course, .date {
+        color: #333 !important;
+        text-decoration: none;
+    }
+    
+    .project-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+
+    .skill {
+        background-color: #f0f0f0 !important;
+        color: black !important;
+        border: 1px solid #ccc;
+    }
+
+    .project-link {
+        background-color: transparent !important;
+        color: #444 !important;
+        padding: 0;
+        border-radius: 0;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    /* Show the full URL next to links */
+    a[href^="http"]::after {
+        content: " [" attr(href) "]";
+        font-size: 0.9em;
+        color: #555;
+        font-weight: normal;
+    }
+
+    /* Don't show URLs for email and phone links */
+    a[href^="mailto"]::after, a[href^="tel"]::after {
+        content: "";
+    }
+}
     </style>
 </head>
 <body>
@@ -226,8 +334,8 @@
             <img src="profile.png" alt="David Galati" class="profile-picture">
             <h1>David Galati</h1>
             <div class="contact-info">
-                <a href="mailto:david.galati10@gmail.com">david.galati10@gmail.com</a> |
-                <a href="tel:+310625463282">(+31) 0625463282</a> |
+                <a href="mailto:david.galati10@gmail.com">david.galati10@gmail.com</a>
+                <a href="tel:+310625463282">(+31) 0625463282</a>
                 <a href="https://www.linkedin.com/in/david-galati-30b70a209/" target="_blank">LinkedIn</a>
             </div>
         </header>
@@ -499,7 +607,29 @@
                     <li>PostgreSQL Replication, High Availability & Scalability</li>
                 </ul>
             </section>
-
+            
+            <section id="languages" class="section">
+                <h2 class="section-title">Spoken Languages</h2>
+                <div class="languages-container">
+                    <div class="language-item">
+                        <span class="language-name">Romanian</span>
+                        <span class="language-level">Native</span>
+                    </div>
+                    <div class="language-item">
+                        <span class="language-name">English</span>
+                        <span class="language-level">C2 - Proficient</span>
+                    </div>
+                    <div class="language-item">
+                        <span class="language-name">German</span>
+                        <span class="language-level">B2 - Upper-Intermediate</span>
+                    </div>
+                    <div class="language-item">
+                        <span class="language-name">Dutch</span>
+                        <span class="language-level">B1 - Intermediate</span>
+                    </div>
+                </div>
+            </section>
+            
             <section id="education" class="section">
                 <h2 class="section-title">Education</h2>
                 <div class="education-item">
@@ -508,9 +638,9 @@
                     <div class="date">2024- 2025</div>
                     <div class="job-details">
                         <ul>
+                            <li>Finalist in two prestigious international competitions; The Negotiation Challenge (South Africa) and The Warsaw Negotiation Round - Bronze Medalist.</li>
                             <li>Completed a comprehensive training program focused on advanced negotiation techniques, conflict resolution, and effective communication skills.</li>
-                            <li>Gained practical experience through simulated negotiation scenarios, enhancing my ability to navigate complex discussions and achieve mutually beneficial outcomes.</li>
-                            <li>Developed a strong understanding of negotiation strategies applicable in both professional and personal contexts
+                            <li>Developed a strong understanding of negotiation strategies applicable in both professional and personal contexts.</li>
                         </ul>
                     </div>
                 </div>
