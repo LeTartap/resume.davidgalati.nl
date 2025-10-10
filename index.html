@@ -81,7 +81,7 @@
             text-align: justify;
         }
 
-        .job, .education-item {
+        .job, .education-item, .certification-list li {
             margin-bottom: 25px;
         }
 
@@ -101,9 +101,13 @@
             color: #7f8c8d;
         }
 
-        .job-details ul {
+        .job-details ul, .certification-list {
             padding-left: 20px;
             margin-top: 10px;
+        }
+        
+        .certification-list li {
+            margin-bottom: 10px;
         }
 
         .skills-container {
@@ -179,7 +183,15 @@
         .project-link:hover {
             background-color: var(--secondary-color);
         }
-
+        /* Add this CSS rule inside the <style> tag */
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid var(--secondary-color);
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
         footer {
             text-align: center;
             margin-top: 40px;
@@ -211,10 +223,11 @@
 
     <div class="container">
         <header>
+            <img src="profile.png" alt="David Galati" class="profile-picture">
             <h1>David Galati</h1>
             <div class="contact-info">
                 <a href="mailto:david.galati10@gmail.com">david.galati10@gmail.com</a> |
-                <!-- <a href="tel:+310625463282">(+31) 0625463282</a> | -->
+                <a href="tel:+310625463282">(+31) 0625463282</a> |
                 <a href="https://www.linkedin.com/in/david-galati-30b70a209/" target="_blank">LinkedIn</a>
             </div>
         </header>
@@ -329,7 +342,14 @@
                         </div>
                         <a href="https://github.com/letartap-studios/Awkna-new" class="project-link" target="_blank">View on GitHub</a>
                     </div>
-
+                    <div class="project-card">
+                        <div class="project-content">
+                            <div class="project-course">Object Oriented Java</div>
+                            <div class="project-title">Collecto - Networked Multiplayer Java Game</div>
+                            <p class="project-description">A fully functional, networked version of the classic game Connect Four, built in Java. It features a client-server architecture for two-player games, an AI opponent with adjustable difficulty, and a text-based UI.</p>
+                        </div>
+                        <a href="https://github.com/LeTartap/UTMod2ProgrammingProjectYellow3-4" class="project-link" target="_blank">View on GitHub</a>
+                    </div>
                     <div class="project-card">
                         <div class="project-content">
                             <div class="project-course">Architecture of Information Systems</div>
@@ -459,6 +479,21 @@
                     <span class="skill">Microservices</span>
 
                 </div>
+            </section>
+
+                        
+            <section id="certifications" class="section">
+                <h2 class="section-title">Professional Development & Certifications</h2>
+                 <ul class="certification-list">
+                    <li>CompTIA Linux+ (XK0-006) Complete Course & Exam</li>
+                    <li>Introduction to Service Management with ITIL 4</li>
+                    <li>Vim Essentials - Complete Practical Vim Tutorial</li>
+                    <li>Ansible - Hands-On-DevOps</li>
+                    <li>Linux Mastery: Master the Linux Command Line</li>
+                    <li>SQL and PostgreSQL: The Complete Developer's Guide</li>
+                    <li>Terraform for the Absolute Beginners with Labs</li>
+                    <li>PostgreSQL Replication, High Availability & Scalability</li>
+                </ul>
             </section>
 
             <section id="education" class="section">
